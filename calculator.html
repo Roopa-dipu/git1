@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        position:absolute;
+        top:20%;
+        left: 38%;
+        background-color: palevioletred;
+        height: 69vh;
+        width: 31vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        flex-wrap: wrap;
+    }
+    #display{
+        position: absolute;
+        top: 30px;
+        height: 10vh;
+        width: 25vw;
+        flex-wrap: wrap;
+        
+    }
+    button{
+
+       background-color: rgb(22, 106, 78);
+       height: 6vh;
+       width: 5vw;
+       position: relative;
+       left: 10px;
+       top: 30px;
+       flex-wrap: wrap;
+
+       
+    }
+    
+</style>
+<body>
+    <div id="container">
+        <input id="display" type="text">
+        <div id="buttons">
+        <button id="cal1" value="1">1</button>
+        <button id="cal2" value="2">2</button>
+        <button id="cal3" value="3">3</button>
+        <button id="cal4" value="4">4</button>
+        <button id="cal5" value="5">5</button>
+        <button id="cal6" value="6">6</button>
+        <button id="cal7" value="7">7</button>
+        <button id="cal8" value="8">8</button>
+        <button id="cal9" value="9">9</button>
+        <button id="cal10" value="0">0</button>
+        <button id="cal01" value="+">+</button>
+        <button id="cal12" value="-">-</button>
+        <button id="cal13" value="*">/</button>
+        <button id="cal14" value="/">%</button>
+        <button id="cal15" value="%">*</button>
+        <button id="cal16" value="=">=</button>
+        <button id="cal17" value="Ac">AC</button>
+        </div>
+    </div>
+    <script>
+        
+  const display = document.getElementById("display");
+
+  const button1 = document.getElementById("cal1");
+  const button2 = document.getElementById("cal2");
+  const button3 = document.getElementById("cal3");
+  const button4 = document.getElementById("cal4");
+  const button5 = document.getElementById("cal5");
+  const button6 = document.getElementById("cal6");
+  const button7 = document.getElementById("cal7");
+  const button8 = document.getElementById("cal8");
+  const button9 = document.getElementById("cal9");
+  const button10 = document.getElementById("cal10"); 
+  const button01 = document.getElementById("cal01"); 
+  const button12 = document.getElementById("cal12"); 
+  const button13 = document.getElementById("cal13"); 
+  const button14 = document.getElementById("cal14"); 
+  const button15 = document.getElementById("cal15"); 
+  const button16 = document.getElementById("cal16"); 
+  const button17 = document.getElementById("cal17"); 
+
+  function values() {
+    const buttons = [
+      button1, button2, button3, button4, button5, button6, button7, button8,
+      button9, button10, button01, button12, button13, button14,button15
+    ];
+    buttons.forEach(function(button) {
+        button.addEventListener("click",function(){
+            display.value+=button.value;
+        });
+    });
+     button16.addEventListener("click", function () {
+    try {
+      display.value = eval(display.value);
+    } catch {
+      display.value = "Error";
+    }
+  });
+}
+button17.addEventListener("click",function (){
+    display.value=" "
+
+});
+    
+
+values();
+</script>
+
+</body>
+</html>

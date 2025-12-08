@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" >
+</head>
+<body background="https://pyseek.com/wp-content/uploads/2022/02/number-guessing-game.jpg"></body>
+    <div id="container">
+        <h1>Number Guessing Game</h1>
+        <input type="number" class="input" placeholder="Enter the number">
+                
+            <button class="check">Check</button>
+            <button class="reset">Reset</button>
+       
+        <p class="output"></p>
+    </div>
+    <script>
+        let Computer=Math.floor(Math.random()*100)+1;
+        console.log(Computer)
+        const input=document.querySelector('.input');
+        const check=document.querySelector('.check');
+        const reset=document.querySelector('.reset');
+        const output=document.querySelector('.output');
+        check.addEventListener("click",()=>{
+            let UserGuess=Number(input.value);
+            if(UserGuess<1 || UserGuess>100){
+                output.textContent="Yor guess outoff range!";
+                output.style.color="red";
+            }
+            if(UserGuess==Computer){
+                output.textContent="Congratulation!🎊🎊🎊🎊🎊🎊 YOU guessed the number!";
+                const gitvi=document.getElementById("gif-holder");
+                gitvi.innerHTML=
+                src="https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif" 
+               alt="Congratulations" 
+               width="300">
+               ;output.style.color="green"
+                
+                
+            }
+            else if(UserGuess>Computer){
+                 output.textContent="Too high! Try again";
+                output.style.color="red"
+            }
+            else{
+                 output.textContent="Too low! Try again";
+                output.style.color="red"
+            }
+            
+        })
+        reset.addEventListener("click",()=>{
+            let Computer=Math.floor(Math.random()*100)+1;
+            console.log(Computer)
+            input.value="";
+            output.textContent="";
+    
+        })
+        
+        
+        
+    </script>
+</body>
+</html>
