@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(231, 226, 218);
+    }
+    h2{
+        background-color: green;
+        margin: 0;
+        padding: 40px;
+        text-align: center;
+        color: azure;
+    }
+    .container{
+        background-color:white;
+        margin: 10px;
+        width: 60vw;
+        margin-left: 21%;
+        color: rgb(25, 143, 25);
+        font-size:larger;
+        font-weight:bold;
+        box-shadow:  2px 2px 25px 1px black ;
+        border-radius: 10px;
+        
+    }
+    .info{
+        color: rgb(0, 0, 0);
+        font-size: small;
+        font-weight:normal;
+        margin-left: 10px;
+    }
+    button{
+        background-color: green;
+        padding: 8px;
+        border-radius: 10px;
+        margin:2px;
+        margin-left: 10px;
+    }
+    .sty{
+        padding:3px;
+        margin-left: 10px;border-bottom: 4px solid green;
+        margin-right: 10px;
+    }
+    
+</style>
+<body>
+    <header>
+    <h2>POLABOINA ROOPA</h2>
+    </header>
+    <div class="container">
+        <p class="sty" >Personal Details</p>
+
+        <div class="info">
+        <p><strong>Name:</strong>Roopa Polaboina</p>
+        <p><strong>Age:</strong>20</p>
+        <p><strong>Location:</strong>Yacharam</p>
+        </div>
+        <p class="sty">Education</p>
+        <div class="info">
+            <p>B.Tech in Computer Science Engineering</p>
+        </div>
+        <p class="sty">Courses</p>
+        <div class="info">
+            <p>Python</p>
+            <p>Javascript</p>
+            <p>HTML</p>
+            <p>CSS</p>
+        </div>
+        <p class="sty">Skills</p>
+        
+        <p style="background-color: green;display: inline;color: white;padding: 5px;font-size: small;margin-left: 10px;border-radius: 10px;">HTML</p>
+        <p style="background-color: green;display: inline;color: white;padding: 5px;font-size: small;margin-left: 10px;border-radius: 10px;">CSS</p>
+        <p style="background-color: green;display: inline;color: white;padding: 5px;font-size: small;margin-left: 10px;border-radius: 10px;">Python</p>
+        <p style="background-color: green;display: inline;color: white;padding: 5px;font-size: small;margin-left: 10px;border-radius: 10px;">Javascript</p>
+        <p class="sty">Contact Me</p>
+        <div class="info">
+        <p>Email:heff@gmail.com</p>
+        <p>Phone:67149128698</p>
+        </div>
+        <button class="submit">Show More Details</button>
+    </div>
+    <script>
+        const sub=document.querySelector(".submit")
+        const container=document.querySelector(".container")
+        const hobbies=document.createElement("p")
+        const text=document.createElement("p")
+        const text1=document.createElement("p")
+        const exper=document.createElement("p")
+        const exptext=document.createElement("p")
+        container.appendChild(hobbies)
+        container.appendChild(text)
+        container.appendChild(text1)
+        container.appendChild(exper)
+        container.appendChild(exptext)
+        sub.addEventListener("click",function(){
+            sub.innerHTML="Hide the details";
+            hobbies.innerHTML="Hobbies"
+            hobbies.style.padding="1px";
+            hobbies.style.marginLeft="10px";
+            hobbies.style.borderBottom= "4px solid green";
+            hobbies.style.marginright="10px";
+            text1.innerHTML="Drawing"
+            text.innerHTML="learning"
+            text.style.marginLeft="10px"
+            text.style.marginTop="5px"
+            text.style.fontSize="14px"
+            text.style.color="black"
+            text.style.fontWeight="5px"
+             text1.style.marginLeft="10px"
+             text1.style.marginTop="2px"
+            text1.style.fontSize="14px"
+            text1.style.color="black"
+            text1.style.fontWeight="5px"
+            exper.innerHTML="Experience"
+            exptext.innerHTML="I am the fresher"
+            exper.style.marginLeft="10px"
+            exper.style.borderBottom= "4px solid green";
+            exptext.style.marginLeft="10px"
+            exptext.style.marginTop="5px"
+            exptext.style.fontSize="14px"
+            exptext.style.color="black"
+            exptext.style.fontWeight="5px"
+        })  
+    </script>
+</body>
+</html>
